@@ -1,5 +1,6 @@
-import Test_Carlos_PuertoG
 import unittest
+import Test_Carlos_PuertoG
+import Test2_Carlos_PuertoG
 import testAlejandraValencia
 
 '''
@@ -15,11 +16,15 @@ class Test_ejemplo_suma (unittest.TestCase):
 
 #Despues de este mensaje ustedes deben integrar sus casos de prueba
 
+class Test_multiplicacion(unittest.TestCase):
+    def test_multl(self):
+        result=Test2_Carlos_PuertoG.multiplicacion(5,3)
+        self.assertEqual(result,18)
 
-class Test_mcd(unittest.TestCase): #Validar máximo común divisor
+class Test_mcd(unittest.TestCase): 
     def test_mcd(self):
         result=testAlejandraValencia.maximoComunDivisor(35,60)
-        self.assertEqual(result,3) #Verificar si el resultado esperado es el correcto
+        self.assertEqual(result,3) #Validar máximo común divisor
         
 
 #Esto va de último
