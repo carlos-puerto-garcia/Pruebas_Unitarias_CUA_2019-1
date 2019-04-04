@@ -1,5 +1,6 @@
 import Test_Carlos_PuertoG
 import unittest
+import Calculadora_Melu
 
 '''
 creamos los casos de prueba para las funciones
@@ -13,7 +14,10 @@ class Test_ejemplo_suma (unittest.TestCase):
         self.assertEqual(result,10)
 
 #Despues de este mensaje ustedes deben integrar sus casos de prueba
-
+class TestCalculadora (unittest.TestCase):
+    def testMultiplicacion(self):
+        resultado=Calculadora_Melu.multiplicacion (2, 4)
+        self.assertEqual(resultado, 8)
 
         
 
