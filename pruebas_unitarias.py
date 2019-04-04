@@ -1,5 +1,6 @@
-import Test_Carlos_PuertoG
 import unittest
+import Test_Carlos_PuertoG
+import Test2_Carlos_PuertoG
 
 '''
 creamos los casos de prueba para las funciones
@@ -14,6 +15,11 @@ class Test_ejemplo_suma (unittest.TestCase):
 
 #Despues de este mensaje ustedes deben integrar sus casos de prueba
 
+
+class Test_multiplicacion(unittest.TestCase):
+    def test_multl(self):
+        result=Test2_Carlos_PuertoG.multiplicacion(5,3)
+        self.assertEqual(result,18)
 
         
 
