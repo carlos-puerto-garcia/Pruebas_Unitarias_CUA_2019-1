@@ -3,6 +3,7 @@ import Calculadora_Melu
 import Test_Carlos_PuertoG
 import Test2_Carlos_PuertoG
 import testAlejandraValencia
+import Prueba_Unitaria_AC
 
 '''
 creamos los casos de prueba para las funciones
@@ -31,7 +32,12 @@ class Test_mcd(unittest.TestCase):
     def test_mcd(self):
         result=testAlejandraValencia.maximoComunDivisor(35,60)
         self.assertEqual(result,3) #Validar máximo común divisor
-        
+       
+class Test_areacilindro (unittest.TestCase):
+    def test_area(self):
+        result=Prueba_Unitaria_AC.areacilindro(3.14, 3, 3)
+        self.assertEqual(result,113.03999999999999)
+#result=area total del cilindro
 
 #Esto va de último
 if __name__ == '__main__':
