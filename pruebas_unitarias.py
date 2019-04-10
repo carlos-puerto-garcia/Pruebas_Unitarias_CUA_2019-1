@@ -1,9 +1,11 @@
-﻿import unittest
+import unittest
 import Calculadora_Melu
 import Test_Carlos_PuertoG
 import Test2_Carlos_PuertoG
 import testAlejandraValencia
 import Prueba_Unitaria_AC
+import multiplicacionAlejandroVilla
+import numeroPrimoAlejandroVilla
 
 '''
 creamos los casos de prueba para las funciones
@@ -36,8 +38,17 @@ class Test_mcd(unittest.TestCase):
 class Test_areacilindro (unittest.TestCase):
     def test_area(self):
         result=Prueba_Unitaria_AC.areacilindro(3.14, 3, 3)
-        self.assertEqual(result,113.03999999999999)
-#result=area total del cilindro
+        self.assertEqual(result,113.03999999999999)#result=area total del cilindro
+        
+class TestMultiplicacion (unittest.TestCase):
+    def testMultiplicacion(self):
+        resultado = multiplicacionAlejandroVilla.multiplicacion (5, 6)
+        self.assertEqual(resultado, 30) #Multiplicar dos numeros
+        
+class TestNumeroPrimo (unittest.TestCase):
+    def testNumeroPrimo(self):
+        resultado = numeroPrimoAlejandroVilla.primo(5)
+        self.assertEqual(resultado, True) #Validar Numero Primo
 
 #Esto va de último
 if __name__ == '__main__':
