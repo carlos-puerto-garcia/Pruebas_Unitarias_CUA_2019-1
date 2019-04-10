@@ -7,6 +7,7 @@ import Prueba_Unitaria_AC
 import multiplicacionAlejandroVilla
 import numeroPrimoAlejandroVilla
 import Daniel_Cardona
+import formulas
 
 '''
 creamos los casos de prueba para las funciones
@@ -55,6 +56,36 @@ class Test_potencia(unittest.TestCase):
     def test_potencia(self):
         result=Daniel_Cardona.potencia(8,2)
         self.assertEqual(result,3) #Validar potencia
+
+class Test_suma(unittest.TestCase):
+    def test_suma(self):
+        result=formulas.suma(15,23)
+        self.assertEqual (result,60)
+
+class Test_resta(unittest.TestCase):
+    def test_resta(self):
+        result=formulas.resta(28,12)
+        self.assertEqual (result,19)        
+
+class Test_multiplicacion(unittest.TestCase):
+    def test_multiplicacion(self):
+        result=formulas.multiplicacion(7,5)
+        self.assertEqual (result,40)
+
+class Test_division(unittest.TestCase):
+    def test_division(self):
+        result=formulas.division(80,4)
+        self.assertEqual (result,13)        
+
+class Test_maximocomundivisor(unittest.TestCase): 
+    def test_maximocomundivisor(self):
+        result=formulas.maximocomundivisor(30,90)
+        self.assertEqual(result,4)
+
+class Test_max(unittest.TestCase): 
+    def test_max(self):
+        result=formulas.max(30,90,15)
+        self.assertEqual(result,max)
 
 #Esto va de último
 if __name__ == '__main__':
