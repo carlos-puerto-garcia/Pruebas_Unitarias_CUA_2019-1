@@ -8,11 +8,17 @@ import multiplicacionAlejandroVilla
 import numeroPrimoAlejandroVilla
 import Daniel_Cardona
 import formulas
+import raiz
 
 '''
 creamos los casos de prueba para las funciones
 y para eso debemos crear una clase
 '''
+
+class Test_raiz(unittest.TestCase):
+    def test_raiz(self):
+        result=raiz.raiz(100)
+        self.assertEqual(result,5)
 
 class Test_ejemplo_suma (unittest.TestCase):
     #Escribimos un metodo:
