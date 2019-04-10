@@ -6,6 +6,7 @@ import testAlejandraValencia
 import Prueba_Unitaria_AC
 import multiplicacionAlejandroVilla
 import numeroPrimoAlejandroVilla
+import Daniel_Cardona
 
 '''
 creamos los casos de prueba para las funciones
@@ -49,6 +50,11 @@ class TestNumeroPrimo (unittest.TestCase):
     def testNumeroPrimo(self):
         resultado = numeroPrimoAlejandroVilla.primo(5)
         self.assertEqual(resultado, True) #Validar Numero Primo
+
+class Test_potencia(unittest.TestCase): 
+    def test_potencia(self):
+        result=Daniel_Cardona.potencia(8,2)
+        self.assertEqual(result,3) #Validar potencia
 
 #Esto va de último
 if __name__ == '__main__':
