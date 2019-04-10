@@ -1,6 +1,6 @@
 import Test_Carlos_PuertoG
 import unittest
-
+import calculadora
 '''
 creamos los casos de prueba para las funciones
 y para eso debemos crear una clase
@@ -15,7 +15,10 @@ class Test_ejemplo_suma (unittest.TestCase):
 #Despues de este mensaje ustedes deben integrar sus casos de prueba
 
 
-        
+        class Test_multiplicacion (unittest.TestCase):
+    def testmultl(self):
+        result=calculadora.multiplicacion (5,10,2)
+        self.assertEqual(result,100)
 
 #Esto va de último
 if __name__ == '__main__':
